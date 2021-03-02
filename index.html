@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2 class="title">Our Pricing</h2>
+            <label class="tooglebox">Annualy
+                <input type="checkbox" id="toogle" class="toogle">
+                <span role="checkbox" aria-checked="false" class="tooglebutton"></span>
+                Monthly
+            </label>
+        </header>
+        <main class="container-main">
+            <div class="card">
+                <h3>Basic</h3>
+                <strong class="price">$199.99</strong>
+                <hr>500 GB Storage
+                <hr>2 Users Allowed
+                <hr>Send up to 3 GB
+                <hr>
+                <button class="button">Learn More</button>
+            </div>
+            <div class="card">
+                <h3>Professional</h3>
+                <strong class="price">$249.99</strong>
+                <hr>
+                1 TB Storage
+                <hr>
+                5 Users Allowed
+                <hr>
+                Send up to 10 GB
+                <hr>
+                <button class="button">Learn More</button>
+            </div>
+            <div class="card">
+                <h3>Master</h3>
+                <strong class="price">$399.99</strong>
+                <hr>2 TB Storage
+                <hr>10 Users Allowed
+                <hr>Send up to 20 GB
+                <hr>
+                <button class="button button--secondary">Learn More</button>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="src/js/main.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background-color: hsl(240, 78%, 98%);
+    background-image: url("images/bg-top.svg"), url("images/bg-bottom.svg");
+    background-position: right top, left bottom;
+    background-repeat: no-repeat;
+
+}
+
+.title {
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.tooglebox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    transition: opacity 1s;
+    cursor: pointer;
+
+    &:hover {
+
+        opacity: .7;
+    }
+}
+
+.toogle {
+    display: none;
+    font-family: Montserrat;
+
+    &:checked + .tooglebutton::after {
+        transform: translateX(50px);
+    }
+
+    &button {
+        display: block;
+        width: 90px;
+        height: 40px;
+        background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        border-radius: 25px;
+        position: relative;
+        margin: 20px;
+        padding: 5px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            transition: transform 2s;
+        }
+
+    }
+
+}
+.container {
+    height: 250vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.price {
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    margin-top: 70px;
+    box-shadow: 0 7px 10px 0 #ddd;
+
+
+    &:nth-child(odd) {
+
+        background-color: white;
+
+        & .button {
+            background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+            color: white;
+            transition: background 5s;
+
+            &:hover {
+                background: white;
+                border-color: black;
+                color: hsl(237, 63%, 64%);
+
+            }
+        }
+
+    }
+
+    &:nth-child(even) {
+
+        color: white;
+        background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        transform: scaleY(1.05);
+
+        & .button {
+            background: white;
+            border-color: white;
+            color: hsl(232, 13%, 33%);
+
+            &:hover {
+                color: white;
+                background: hsl(237, 63%, 64%);
+            }
+        }
+
+    }
+}
+
+.button {
+    font-family: Montserrat;
+    text-transform: uppercase;
+    border: 1px transparent solid;
+    border-radius: 3px;
+    height: 50px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.card:nth-child(even) hr {
+    border-color: white;
+}
+
+hr {
+    border: 1px solid #ddd;
+    height: 0;
+    width: 100%;
+}
+
+@media (min-width: 1068px) {
+    body{
+        overflow-y: hidden;
+    }
+    .container-main {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
